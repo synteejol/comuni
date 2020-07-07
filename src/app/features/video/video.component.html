@@ -1,35 +1,73 @@
-<script src="videocarousel.js"></script>
-
-<p>video works!</p>
-<div *ngIf="videos">
-  {{ videos[0].nome | json}}
-</div>
-<button class="btn-primary">Prova</button>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/path/to/material-icons/css/material-icons.min.css">
 
 
+<ngx-hm-carousel
+  [(ngModel)]="index"
+  (ngModelChange)="indexChanged($event)"
+  (ngModelChange)="toggleDirection($event)"
 
-<!--<div>-->
-<!--  <ngb-carousel *ngIf="images">-->
-<!--    <ng-template ngbSlide>-->
-<!--      <img [src]="images[0]" alt="Random first slide">-->
-<!--      <div class="carousel-caption">-->
-<!--        <h3>First slide label</h3>-->
-<!--        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>-->
+
+
+
+
+  [data]="videos"
+
+  class="carousel">
+
+  <section ngx-hm-carousel-container class="content">
+    <article class="item cursor-pointer visible_important"
+             ngx-hm-carousel-item
+             *ngFor="let video of videos; let i = index">
+<!--      <div class="img"-->
+
+<!--      <section class="card card-info text-white bg-dark mb-3">-->
+
+<!--        <section class="card-img-top">-->
+
+        <div class="container">
+<!--          <div class="img"-->
+<!--               [style.backgroundImage]="'url(http://picsum.photos/600/400/?1)'">-->
+<!--          </div>-->
+          <iframe  class="responsive-iframe"  [src]="video.video | safe"  frameborder="0" webkitallowfullscreen mozallowfullscreen
+                  allowfullscreen></iframe>
+        </div>
+
+
+<!--        </section>-->
+<!--      </section>-->
+
+    </article>
+    <ng-template #infiniteContainer></ng-template>
+  </section>
+
+<!--  <ng-template #carouselContent let-avatar let-i="index">-->
+<!--    <article class="item cursor-pointer visible_important">-->
+<!--      <div class="img"-->
+<!--           [style.backgroundImage]="'url('+avatar.url+')'">-->
 <!--      </div>-->
-<!--    </ng-template>-->
-<!--    <ng-template ngbSlide>-->
-<!--      <img [src]="images[1]" alt="Random second slide">-->
-<!--      <div class="carousel-caption">-->
-<!--        <h3>Second slide label</h3>-->
-<!--        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
-<!--      </div>-->
-<!--    </ng-template>-->
-<!--    <ng-template ngbSlide>-->
-<!--      <img [src]="images[2]" alt="Random third slide">-->
-<!--      <div class="carousel-caption">-->
-<!--        <h3>Third slide label</h3>-->
-<!--        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>-->
-<!--      </div>-->
-<!--    </ng-template>-->
-<!--  </ngb-carousel>-->
-<!--</div>-->
+<!--    </article>-->
+<!--  </ng-template>-->
+
+
+
+  <ng-template #carouselDot let-model>
+    <div class="ball bg-accent"
+    ></div>
+    <i class="material-icons"></i>
+  </ng-template>
+
+  <ng-template #carouselPrev>
+    <div class="click-area">
+      <i class="material-icons">keyboard_arrow_left</i>
+    </div>
+  </ng-template>
+  <ng-template #carouselNext>
+    <div class="click-area">
+      <i class="material-icons">keyboard_arrow_right</i>
+    </div>
+  </ng-template>
+
+</ngx-hm-carousel>
+
+

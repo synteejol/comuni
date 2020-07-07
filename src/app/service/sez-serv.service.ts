@@ -3,8 +3,10 @@ import {Sezioni} from '../model/sezioni';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Video} from '../model/video';
-const ApiUrl = 'http://localhost/db_conn.php';
-const ApiVideoUrl = 'http://localhost/video.php?idsez=';
+// const ApiUrl = 'http://localhost/db_conn.php';
+const ApiUrl = 'https://secret-escarpment-08158.herokuapp.com/db_conn.php';
+// const ApiVideoUrl = 'http://localhost/video.php?idsez=';
+const ApiVideoUrl = 'https://secret-escarpment-08158.herokuapp.com/video.php?idsez=';
 @Injectable({
   providedIn: 'root'
 })

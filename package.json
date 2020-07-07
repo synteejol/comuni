@@ -21,10 +21,16 @@
     "@angular/platform-browser-dynamic": "~9.1.4",
     "@angular/router": "~9.1.4",
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
+    "@types/youtube": "0.0.39",
     "bootstrap": "^4.5.0",
     "font-awesome": "^4.7.0",
+    "material-icons": "^0.3.1",
+    "ngx-hm-carousel": "^2.0.0-rc.1",
+    "ngx-light-carousel": "^1.1.5",
+    "ngx-youtube-player": "^9.1.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "videogular-youtube": "^2.0.6",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

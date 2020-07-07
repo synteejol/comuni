@@ -3,7 +3,8 @@ import {HttpClient} from '@angular/common/http';
 import {Sezioni} from '../../model/sezioni';
 import {SezServService} from '../../service/sez-serv.service';
 
-const ApiUrl = 'http://localhost/db_conn.php';
+// const ApiUrl = 'http://localhost/db_conn.php';
+const ApiUrl = 'https://secret-escarpment-08158.herokuapp.com/db_conn.php';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
